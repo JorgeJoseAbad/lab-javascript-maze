@@ -29,10 +29,10 @@ Maze.prototype.turnRight     = function(){
 Maze.prototype.isPathForward = function(){
   //this._miner.row=3;
   //this._miner.col=3;
-   if ((this._miner.dir === 0) $$ (this._maze[this._miner.row-1][this._miner.col]==='F') )
+   if ((this._miner.dir === 0) && (this._maze[this._miner.row-1][this._miner.col]==='F') )
      {return false;}
 
-  if ((this._miner.dir === 1) $$ (this._maze[this._miner.row][this._miner.col+1]==='F')){
+  if ((this._miner.dir === 1) && (this._maze[this._miner.row][this._miner.col+1]==='F')){
        return false;
      }
 
@@ -40,7 +40,7 @@ Maze.prototype.isPathForward = function(){
          return true;
        }
 
-  if ((this._miner.dir=== 3) $$ (this._maze[this._miner.row][this._miner.col-1]==='F')){
+  if ((this._miner.dir=== 3) && (this._maze[this._miner.row][this._miner.col-1]==='F')){
            return false;
          }
 };
