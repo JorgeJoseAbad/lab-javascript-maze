@@ -29,39 +29,41 @@ Maze.prototype.turnRight     = function(){
 Maze.prototype.isPathForward = function(){
   //this._miner.row=3;
   //this._miner.col=3;
-   if ((this._miner.dir === 0) && (this._maze[this._miner.row-1][this._miner.col]==='F') )
-     {return false;}
+  //console.log(this._miner);
+  //console.log(this._maze)
+   if ((this._miner.dir === 0) &&
+        (
+          (this._maze[this._miner.row-1][this._miner.col] === false)))
+      {
+        return false;
+      }
 
-  if ((this._miner.dir === 1) && (this._maze[this._miner.row][this._miner.col+1]==='F')){
-       return false;
-     }
+  if ((this._miner.dir === 1) && (this._maze[this._miner.row][this._miner.col+1] === false))
+            {
+               return false;
+             }
 
-  if (this._miner.dir === 2) /*$$ (this._maze[this._miner.row+1][this._miner.col]==='T')*/{
+  if ((this._miner.dir === 2) && (this._maze[this._miner.row+1][this._miner.col]===true)){
+
          return true;
        }
 
-  if ((this._miner.dir=== 3) && (this._maze[this._miner.row][this._miner.col-1]==='F')){
+  if ((this._miner.dir=== 3) && (this._maze[this._miner.row][this._miner.col-1]===false)){
            return false;
          }
 };
 
 
 Maze.prototype.isPathLeft    = function(){
-
-
-
-
-
-
 };
 
 Maze.prototype.isPathRight   = function(){
-}
+};
 
 Maze.prototype.moveForward   = function(){
-}
+};
 
 Maze.prototype.notDone       = function(){
-}
+};
 
 module.exports = Maze;

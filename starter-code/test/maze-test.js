@@ -11,7 +11,7 @@ describe('Maze', function() {
       [ T,  F , T,  T,  T,  F],
       [ T,  F,  T,  F,  T,  F],
       [ T,  T,  T,  F,  T,  F],
-      [ F,  F,  F,  F,  T,  F],
+      [ F,  F,  F,  F,  F,  F],
       [ T,  T,  T,  T,  T,  F],
       [ T,  F,  F,  F,  F,  T],
       [ T,  T,  T,  T,  T,  T]];
@@ -81,9 +81,12 @@ describe('Maze', function() {
 
   describe('isPathForward()', function() {
     describe('initial position', function(){
+      beforeEach(function() {
+        maze._miner.row = 3;
+        maze._miner.col = 3}
+      );
       it('no path above', function() {
         maze._miner.dir = 0;
-        maze.map
         expect(maze.isPathForward()).to.equal(false);
       });
       it('no path right', function() {
@@ -99,7 +102,7 @@ describe('Maze', function() {
         expect(maze.isPathForward()).to.equal(false);
       });
     });
-
+ //voy por aqui mas o menos   jajaj
     describe('check up', function(){
       beforeEach(function() { maze._miner.dir = 0 });
       it('first row', function() {
