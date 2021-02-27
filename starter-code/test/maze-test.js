@@ -178,7 +178,7 @@ describe('Maze', function() {
     });
   });
 
-  /*describe('isPathLeft()', function() {
+  describe('isPathLeft()', function() {
     describe('initial position', function(){
       beforeEach(function() {
         maze._miner.row = 0 ;
@@ -223,7 +223,7 @@ describe('Maze', function() {
         expect(maze.isPathLeft()).to.equal(false);
       });
     });
-  });*/
+  });
 
   /*describe('isPathRight()', function() {
     describe('initial position', function(){
