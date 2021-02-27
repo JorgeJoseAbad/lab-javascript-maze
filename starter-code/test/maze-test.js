@@ -225,7 +225,7 @@ describe('Maze', function() {
     });
   });
 
-  /*describe('isPathRight()', function() {
+  describe('isPathRight()', function() {
     describe('initial position', function(){
       beforeEach(function() {
         maze._miner.row = 0 ;
@@ -270,7 +270,7 @@ describe('Maze', function() {
         expect(maze.isPathRight()).to.equal(false);
       });
     });
-  });*/
+  });
 
   /*describe('moveForward()', function() {
     describe('Looking Up', function(){
