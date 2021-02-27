@@ -112,6 +112,10 @@ Maze.prototype.moveForward   = function(){
 
 Maze.prototype.notDone       = function(){
 
+   if ((this._maze[this._miner.row] === this._maze[this._exit.row]) &&
+   (this._maze[this._miner.col] === this._maze[this._exit.col]) ) return true;
+   else return false;
+
 };
 
 module.exports = Maze;

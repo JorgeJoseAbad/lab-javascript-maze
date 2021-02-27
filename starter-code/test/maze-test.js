@@ -379,7 +379,7 @@ describe('Maze', function() {
     });
   });
 
-  /*describe('notDone()', function() {
+  describe('notDone()', function() {
     it('finish position', function() {
       maze._miner.row = 3 ;
       maze._miner.col = 4 ;
@@ -394,5 +394,5 @@ describe('Maze', function() {
       maze._exit.col  = 4 ;
       expect(maze.notDone()).to.equal(false);
     });
-  });*/
+  });
 });
