@@ -18,7 +18,6 @@ Maze.prototype.turnLeft      = function(){
   if (this._miner.dir === 3){this._miner.dir=2;}
   };
 
-
 Maze.prototype.turnRight     = function(){
   if (this._miner.dir === 0){this._miner.dir=1;} else
   if (this._miner.dir === 1){this._miner.dir=2;} else
