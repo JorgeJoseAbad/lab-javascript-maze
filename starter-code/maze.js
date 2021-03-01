@@ -27,56 +27,60 @@ Maze.prototype.turnRight     = function(){
 
 Maze.prototype.isPathForward = function(){
 
-  if ((this._miner.dir === 0) && (this._maze[this._miner.row-1] === undefined)) return false;
-  if ((this._miner.dir === 1) && (this._maze[this._miner.row][this._miner.col+1] === undefined)) return false;
-  if ((this._miner.dir === 2) && (this._maze[this._miner.row+1] === undefined)) return false;
-  if ((this._miner.dir === 3) && (this._maze[this._miner.row][this._miner.col-1] === undefined)) return false;
-  if ((this._miner.dir === 0) && (this._maze[this._miner.row-1][this._miner.col] === false)) return false;
-  if ((this._miner.dir === 0) && (this._maze[this._miner.row-1][this._miner.col] === true)) return true;
-  if ((this._miner.dir === 1) && (this._maze[this._miner.row][this._miner.col+1] === false)) return false;
-  if ((this._miner.dir === 1) && (this._maze[this._miner.row][this._miner.col+1] === true)) return true;
-  if ((this._miner.dir === 2) && (this._maze[this._miner.row+1][this._miner.col] === true)) return true;
-  if ((this._miner.dir === 2) && (this._maze[this._miner.row+1][this._miner.col] === false)) return false;
-  if ((this._miner.dir === 3) && (this._maze[this._miner.row][this._miner.col-1] === false)) return false;
-  if ((this._miner.dir === 3) && (this._maze[this._miner.row][this._miner.col-1] === true)) return true;
+  if (this._miner.dir === 0 && this._maze[this._miner.row-1] === undefined) return false;
+  if (this._miner.dir === 1 && this._maze[this._miner.row][this._miner.col+1] === undefined) return false;
+  if (this._miner.dir === 2 && this._maze[this._miner.row+1] === undefined) return false;
+  if (this._miner.dir === 3 && this._maze[this._miner.row][this._miner.col-1] === undefined) return false;
+  if (this._miner.dir === 0 && this._maze[this._miner.row-1][this._miner.col] === false) return false;
+  if (this._miner.dir === 0 && this._maze[this._miner.row-1][this._miner.col] === true) return true;
+  if (this._miner.dir === 1 && this._maze[this._miner.row][this._miner.col+1] === false) return false;
+  if (this._miner.dir === 1 && this._maze[this._miner.row][this._miner.col+1] === true) return true;
+  if (this._miner.dir === 2 && this._maze[this._miner.row+1][this._miner.col] === true) return true;
+  if (this._miner.dir === 2 && this._maze[this._miner.row+1][this._miner.col] === false) return false;
+  if (this._miner.dir === 3 && this._maze[this._miner.row][this._miner.col-1] === false) return false;
+  if (this._miner.dir === 3 && this._maze[this._miner.row][this._miner.col-1] === true) return true;
 };
 
 Maze.prototype.isPathLeft    = function(){
-    if ((this._miner.dir===0) && this._maze[this._miner.row][this._miner.col-1] === undefined) return false;
-    if ((this._miner.dir===1) && this._maze[this._miner.row-1] === undefined) return false;
-    if ((this._miner.dir===2) && this._maze[this._miner.row][this._miner.col+1] === false) return false;
-    if ((this._miner.dir===3) && this._maze[this._miner.row+1] === undefined) return false;
-    if ((this._miner.dir===3) && this._maze[this._miner.row+1][this._miner.col] === true) return true;
+    if (this._miner.dir === 0 && this._maze[this._miner.row][this._miner.col-1] === undefined) return false;
+    if (this._miner.dir === 1 && this._maze[this._miner.row-1] === undefined) return false;
+    if (this._miner.dir === 2 && this._maze[this._miner.row][this._miner.col+1] === undefined) return false;
+    if (this._miner.dir === 3 && this._maze[this._miner.row+1] === undefined) return false;
+    if (this._miner.dir === 0 && this._maze[this._miner.row][this._miner.col-1] === false) return false;
+    if (this._miner.dir === 0 && this._maze[this._miner.row][this._miner.col-1] === true) return true;
+    if (this._miner.dir === 1 && this._maze[this._miner.row-1][this._miner.col] === false) return false;
+    if (this._miner.dir === 1 && this._maze[this._miner.row-1][this._miner.col] === true) return true;
+    if (this._miner.dir === 2 && this._maze[this._miner.row][this._miner.col+1] === false) return false;
+    if (this._miner.dir === 2 && this._maze[this._miner.row][this._miner.col+1] === true) return true;
+    if (this._miner.dir === 3 && this._maze[this._miner.row+1][this._miner.col] === false) return false;
+    if (this._miner.dir === 3 && this._maze[this._miner.row+1][this._miner.col] === true) return true;
 
-    if ((this._miner.dir===0) && this._maze[this._miner.row][this._miner.col-1] === true) return true;
-    if ((this._miner.dir===1) && this._maze[this._miner.row-1][this._miner.col] === true) return true;
-    if ((this._miner.dir===2) && this._maze[this._miner.row][this._miner.col+1] === undefined) return false;
+
 
 };
 
 Maze.prototype.isPathRight   = function(){
-  if((this._miner.dir===0)&& this._maze[this._miner.row][this._miner.col+1] === undefined) return false;
-  if((this._miner.dir===0)&& this._maze[this._miner.row][this._miner.col+1] === true) return true;
-  if((this._miner.dir===0)&& this._maze[this._miner.row][this._miner.col+1] === false) return false;
-  if((this._miner.dir===1)&& this._maze[this._miner.row+1] === undefined) return false;
-  if((this._miner.dir===1)&& this._maze[this._miner.row+1][this._miner.col] === false) return false;
-  if((this._miner.dir===1)&& this._maze[this._miner.row+1][this._miner.col] === true) return true;
-  if((this._miner.dir===2)&& this._maze[this._miner.row][this._miner.col-1] === undefined) return false;
-  if((this._miner.dir===2)&& this._maze[this._miner.row][this._miner.col-1] === false) return false;
-  if((this._miner.dir===2)&& this._maze[this._miner.row][this._miner.col-1] === true) return true;
-  if((this._miner.dir===3)&& this._maze[this._miner.row-1] === undefined) return false;
-  if((this._miner.dir===3)&& this._maze[this._miner.row-1][this._miner.col] === false) return false;
-  if((this._miner.dir===3)&& this._maze[this._miner.row-1][this._miner.col] === true) return true;
+  if(this._miner.dir === 0 && this._maze[this._miner.row][this._miner.col+1] === undefined) return false;
+  if(this._miner.dir === 1 && this._maze[this._miner.row+1] === undefined) return false;
+  if(this._miner.dir === 2 && this._maze[this._miner.row][this._miner.col-1] === undefined) return false;
+  if(this._miner.dir === 3 && this._maze[this._miner.row-1] === undefined) return false;
+  if(this._miner.dir === 0 && this._maze[this._miner.row][this._miner.col+1] === true) return true;
+  if(this._miner.dir === 0 && this._maze[this._miner.row][this._miner.col+1] === false) return false;
+  if(this._miner.dir === 1 && this._maze[this._miner.row+1][this._miner.col] === false) return false;
+  if(this._miner.dir === 1 && this._maze[this._miner.row+1][this._miner.col] === true) return true;
+  if(this._miner.dir === 2 && this._maze[this._miner.row][this._miner.col-1] === false) return false;
+  if(this._miner.dir === 2 && this._maze[this._miner.row][this._miner.col-1] === true) return true;
+  if(this._miner.dir === 3 && this._maze[this._miner.row-1][this._miner.col] === false) return false;
+  if(this._miner.dir === 3 && this._maze[this._miner.row-1][this._miner.col] === true) return true;
 };
 
 Maze.prototype.moveForward   = function(){
  if (this._miner.dir === 0 && this._maze[this._miner.row-1] === undefined) return false;
  if(this._miner.dir === 0 && this._maze[this._miner.row-1][this._miner.col] === true) {
-   this._miner.row -- ; //este es el movimiento
+   this._miner.row -- ; 
    return true;
  }
  if(this._miner.dir === 0 && this._maze[this._miner.row-1][this._miner.col] === false) {
-   //no movimiento
    return false;
  }
 

@@ -12,9 +12,8 @@ var map = [
 var exit= {row:5, col:5};
 
 var maze = new Maze(map,exit);
-console.log(maze); //pruebas
+
 // https://blockly-games.appspot.com/maze?lang=en
-console.log("minero es: ",maze._miner)
 
 
 while (!maze.notDone()) {
@@ -36,4 +35,6 @@ while (!maze.notDone()) {
   console.log(maze._miner);
 }
 
-if (maze === exit ) console.log("hemos llegado");
+if (maze._miner.row === maze._exit.row && maze._miner.col === maze._exit.col ) {
+  console.log("Soy mineroooo....");
+}
